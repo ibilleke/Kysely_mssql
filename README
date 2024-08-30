@@ -1,0 +1,18 @@
+/**
+ * Flujo de trabajo en kysely
+ * 
+ * Iniciamos con una DB existente
+ * 1. Generamos los esquemas son kysely-codgen
+ * 2. Generamos las migraciones adicionales solo para features nuevas
+ * 3. Sincronizar las modificaiones de la DB con Kysely-codegen
+ * 4. Repetir
+ * (Opcional) Hacer una migración base
+ * 
+ * Iniciamos por una BD vacía
+ * 1. Crear migración inicial
+ * 2. Generar los esquemas con kysely-codegen
+ * 3. Agregamos las features nuevas
+ * 4. sincronizamos con kysely-codegen
+ * 5.repetir
+ */
+
