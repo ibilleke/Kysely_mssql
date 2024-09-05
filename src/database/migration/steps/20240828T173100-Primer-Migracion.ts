@@ -3,9 +3,9 @@ import { Kysely} from "kysely"
 export async function up(db: Kysely<any>): Promise<void> {
     await db.schema
             .createTable("faxes")
-            .addColumn("id", "varchar(20)", col => col.primaryKey().notNull())
-            .addColumn("numero_fax", "varchar(250)", col => col.notNull())
-            .addColumn("creado_el", "varchar(250)", col => col.notNull())
+            .addColumn("codigo_fax", "integer", col => col.primaryKey().notNull().identity())
+            .addColumn("nombre_fax", "varchar(250)", col => col.notNull())
+            .addColumn("creado_el", "datetime", col => col.notNull())
             .execute()
 }
 

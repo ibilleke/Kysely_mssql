@@ -2,6 +2,7 @@ import { Kysely, MssqlDialect } from 'kysely'
 import * as Tedious from 'tedious'
 import * as Tarn from 'tarn'
 import path from "path"
+import { DB } from '../../models/Schema'
 
 require('dotenv').config({
   path: path.resolve(__dirname, "../../../.env")
@@ -37,4 +38,4 @@ const dialect = new MssqlDialect({
   }
 })
 
-export const db = new Kysely<any>({dialect})
+export const db = new Kysely<DB>({dialect})
