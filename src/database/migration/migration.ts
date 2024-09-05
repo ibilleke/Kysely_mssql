@@ -9,7 +9,6 @@ const migrator = new Migrator({
         fs,
         path,
         migrationFolder: path.join(__dirname, "steps")
-
     })
 })
 
